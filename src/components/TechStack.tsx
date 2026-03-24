@@ -130,10 +130,14 @@ const TechStack = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const threshold = document
-        .getElementById("work")!
-        .getBoundingClientRect().top;
-      setIsActive(scrollY > threshold);
+      const workEl = document.getElementById("work");
+      if (workEl) {
+        // Calculate the absolute top position of the work element
+        const offsetTop = workEl.getBoundingClientRect().top + scrollY;
+        // Trigger when the user has scrolled past halfway to the work section
+        const threshold = offsetTop - (window.innerHeight / 2);
+        setIsActive(scrollY > threshold);
+      }
     };
     document.querySelectorAll(".header a").forEach((elem) => {
       const element = elem as HTMLAnchorElement;
@@ -169,6 +173,17 @@ const TechStack = () => {
   return (
     <div className="techstack">
       <h2> My Techstack</h2>
+      <div className="tech-concepts">
+        <h3>Core Concepts Applied</h3>
+        <div className="concepts-list">
+          <span className="concept-tag">Structured Frontend Architecture</span>
+          <span className="concept-tag">Responsive UI / UX Design</span>
+          <span className="concept-tag">Interactive Components</span>
+          <span className="concept-tag">Modern Frontend Tooling</span>
+          <span className="concept-tag">Seamless Device Experience</span>
+          <span className="concept-tag">Efficient Content Organization</span>
+        </div>
+      </div>
 
       <Canvas
         shadows

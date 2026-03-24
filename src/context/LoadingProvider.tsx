@@ -5,7 +5,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import Loading from "../components/Loading";
+import Loading, { setProgress } from "../components/Loading";
 
 interface LoadingType {
   isLoading: boolean;
@@ -24,6 +24,12 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
     setIsLoading,
     setLoading,
   };
+  useEffect(() => {
+    // Artificial loading completion since the 3D model is disabled
+    let progress = setProgress((value) => setLoading(value));
+    progress.loaded();
+  }, []);
+
   useEffect(() => {}, [loading]);
 
   return (

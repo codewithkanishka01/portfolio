@@ -5,8 +5,8 @@ const Career = () => {
     <div className="career-section section-container">
       <div className="career-container">
         <h2>
-          My career <span>&</span>
-          <br /> experience
+          Education <span>&</span>
+          <br /> Journey
         </h2>
         <div className="career-info">
           <div className="career-timeline">
@@ -15,43 +15,37 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Ikshan</h5>
+                <h4>BTech (CSE)</h4>
+                <h5>SRM Institute of Science and Technology, Chennai</h5>
               </div>
-              <h3>2020</h3>
+              <h3>2024-2028</h3>
             </div>
             <p>
-              Built 6+ complete applications using React.js. Integrated backend
-              authentication using Node.js & MongoDB. Created responsive UI/UX
-              and designed wireframes using Figma.
+              Pursuing Bachelor's in Computer Science. CGPA: 9.0. Strong foundation in Data Structures and Algorithms, and problem-solving. Solved 40+ problems on LeetCode.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Monocept (Max Life Insurance)</h5>
+                <h4>Higher Secondary (12th)</h4>
+                <h5>Academic Global School, UP</h5>
               </div>
-              <h3>2021</h3>
+              <h3>2024</h3>
             </div>
             <p>
-              Led two development teams on Mpro, a large-scale insurance
-              operations platform. Developed multiple modules using React.js &
-              migrated critical functionalities to Node.js microservices.
+              Completed Higher Secondary education with a score of 75%.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Logic Loop</h5>
+                <h4>High School (10th)</h4>
+                <h5>GN National Public School</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2022</h3>
             </div>
             <p>
-              Building Solid, a proprietary low-code platform using Angular,
-              Next.js & NestJS. Delivering production-ready CMS-based projects
-              including e-commerce, CRM, and import-export automation systems.
+              Completed High School education with a score of 90.01%.
             </p>
           </div>
         </div>

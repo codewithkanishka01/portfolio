@@ -116,7 +116,7 @@
   left: 50%;
   z-index: 0;
   bottom: 50px;
-  pointer-events: inherit;
+  pointer-events: none;
 }
 
 .character-model::after {
@@ -393,5 +393,44 @@ h2.landing-info-h2 {
 
   h2.landing-info-h2 {
     font-size: 75px;
+  }
+}
+
+.landing-avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-avatar-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--accentColor);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.landing-avatar-img:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 768px) {
+  .landing-avatar-img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .landing-avatar-img {
+    width: 450px;
+    height: 450px;
   }
 }

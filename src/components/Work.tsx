@@ -5,62 +5,38 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
-    image: "/images/Solidx.png",
+    title: "MOODTUNES",
+    category: "Mood-Based Music App",
+    tools: "HTML, CSS, JavaScript",
+    image: "/images/moodtunes.png",
   },
   {
-    title: "Radix",
-    category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
-    image: "/images/radix.png",
+    title: "FOODY",
+    category: "Food Database Web Application",
+    tools: "Frontend Architecture, UI/UX",
+    image: "/images/foody.png",
   },
   {
-    title: "Bond Cancellation",
-    category: "Import-Export Automation",
-    tools: "Angular, Next.js, NestJS, Workflows",
-    image: "/images/bond.png",
-  },
-  {
-    title: "Sapphire",
-    category: "CRM Platform",
-    tools: "AngularJS, NestJS, PostgreSQL",
-    image: "/images/sapphire.png",
-  },
-  {
-    title: "Mpro",
-    category: "Insurance Platform",
-    tools: "React.js, Node.js, Microservices",
-    image: "/images/Maxlife.png",
+    title: "PORTFOLIO",
+    category: "Personal Developer Portfolio",
+    tools: "Vite, HTML, CSS, JavaScript",
+    image: "/images/portfolio.png",
   },
 ];
 
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const goToSlide = useCallback(
-    (index: number) => {
-      if (isAnimating) return;
-      setIsAnimating(true);
-      setCurrentIndex(index);
-      setTimeout(() => setIsAnimating(false), 500);
-    },
-    [isAnimating]
-  );
+  const goToSlide = useCallback((index: number) => {
+    setCurrentIndex(index);
+  }, []);
 
   const goToPrev = useCallback(() => {
-    const newIndex =
-      currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
-    goToSlide(newIndex);
-  }, [currentIndex, goToSlide]);
+    setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
+  }, []);
 
   const goToNext = useCallback(() => {
-    const newIndex =
-      currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
-    goToSlide(newIndex);
-  }, [currentIndex, goToSlide]);
+    setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+  }, []);
 
   return (
     <div className="work-section" id="work">
@@ -93,11 +69,16 @@ const Work = () => {
             <div
               className="carousel-track"
               style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
+                width: `${projects.length * 100}%`,
+                transform: `translateX(-${(currentIndex * 100) / projects.length}%)`,
               }}
             >
               {projects.map((project, index) => (
-                <div className="carousel-slide" key={index}>
+                <div 
+                  className="carousel-slide" 
+                  key={index}
+                  style={{ width: `${100 / projects.length}%` }}
+                >
                   <div className="carousel-content">
                     <div className="carousel-info">
                       <div className="carousel-number">

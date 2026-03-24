@@ -110,7 +110,7 @@ body {
   height: var(--vh);
   margin: auto;
   margin-top: 50px;
-  margin-bottom: -100px;
+  margin-bottom: 0px;
 }
 
 .techstack h2 {
@@ -133,5 +133,63 @@ body {
 @media screen and (max-width: 900px) {
   .techstack h2 {
     font-size: 40px;
+  }
+}
+
+.tech-concepts {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  pointer-events: none;
+}
+
+.tech-concepts h3 {
+  font-size: 24px;
+  color: var(--accentColor);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.concepts-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  pointer-events: auto;
+}
+
+.concept-tag {
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.concept-tag:hover {
+  background: rgba(20, 184, 166, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(20, 184, 166, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .tech-concepts {
+    top: 200px;
+  }
+  .tech-concepts h3 {
+    font-size: 20px;
+  }
+  .concept-tag {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }

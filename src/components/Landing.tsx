@@ -9,10 +9,13 @@ const Landing = ({ children }: PropsWithChildren) => {
           <div className="landing-intro">
             <h2>Hello! I'm</h2>
             <h1>
-              RAJESH
+              KANISHKA
               <br />
-              <span>CHITYAL</span>
+              <span>PANDEY</span>
             </h1>
+          </div>
+          <div className="landing-avatar">
+            <img src="/images/avatar.png" alt="Avatar" className="landing-avatar-img" />
           </div>
           <div className="landing-info">
             <h3>A Full Stack</h3>

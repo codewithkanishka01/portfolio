@@ -58,6 +58,14 @@
     padding: 0px;
     width: 50%;
   }
+  .about-me-avatar {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .avatar-img {
+    width: 400px;
+    height: 400px;
+  }
   .about-me p {
     font-size: 1.9vw;
     line-height: 2.3vw;
@@ -68,4 +76,24 @@
     font-size: 2.5rem;
     line-height: 2.7rem;
   }
+}
+
+.about-me-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.avatar-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accentColor);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+.avatar-img:hover {
+  transform: scale(1.05);
 }
