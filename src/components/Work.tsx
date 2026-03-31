@@ -8,19 +8,19 @@ const projects = [
     title: "MOODTUNES",
     category: "Mood-Based Music App",
     tools: "HTML, CSS, JavaScript",
-    image: "/images/moodtunes.png",
+    image: `${import.meta.env.BASE_URL}images/moodtunes.png`,
   },
   {
     title: "FOODY",
     category: "Food Database Web Application",
     tools: "Frontend Architecture, UI/UX",
-    image: "/images/foody.png",
+    image: `${import.meta.env.BASE_URL}images/foody.png`,
   },
   {
     title: "PORTFOLIO",
     category: "Personal Developer Portfolio",
     tools: "Vite, HTML, CSS, JavaScript",
-    image: "/images/portfolio.png",
+    image: `${import.meta.env.BASE_URL}images/portfolio.png`,
   },
 ];
 

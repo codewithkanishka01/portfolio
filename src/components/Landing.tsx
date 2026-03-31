@@ -15,7 +15,7 @@ const Landing = ({ children }: PropsWithChildren) => {
             </h1>
           </div>
           <div className="landing-avatar">
-            <img src="/images/avatar.png" alt="Avatar" className="landing-avatar-img" />
+            <img src={`${import.meta.env.BASE_URL}images/avatar.png`} alt="Avatar" className="landing-avatar-img" />
           </div>
           <div className="landing-info">
             <h3>A Full Stack</h3>
