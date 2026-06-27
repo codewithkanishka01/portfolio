@@ -150,11 +150,6 @@ https://portfolio-blond-ten-6h3d8kfbld.vercel.app/
 💻 **GitHub:**  
 https://github.com/codewithkanishka01
 
-💼 **LinkedIn:**  
-*(Add Your LinkedIn Profile)*
-
-📧 **Email:**  
-*(Add Your Email)*
 
 ---
 
